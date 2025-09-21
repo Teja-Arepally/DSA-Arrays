@@ -1,0 +1,21 @@
+'''9. Second Largest Element
+Problem: Find the second largest element in the array.
+Covers: Comparisons, Traversal.
+Example:
+Input: [10, 20, 5, 30, 25]
+Output: 25  '''
+
+arr=[10,20,5,30,25]
+first_max=float("-inf")
+second_max=float("-inf")
+third_max=float("-inf")
+def first_Second_max(arr,first_max,second_max):
+    for i in arr:
+        if first_max<i:
+            first_max=i
+        if second_max<i and first_max>i:
+            second_max=i
+    return first_max,second_max        
+first_max,second_max=first_Second_max(arr,first_max,second_max)
+print(f'First maximum number:{first_max}')
+print(f'Second maximum number:{second_max}')
